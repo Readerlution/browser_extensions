@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "Speed",
+  "version": "1.0",
+
+  "description": "Hot keys video playback speed",
+
+  "icons": {
+    "48": "speed.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["speed.js"]
+    }
+  ]
+
+}
