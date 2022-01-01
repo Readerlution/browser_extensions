@@ -1,0 +1,21 @@
+
+{
+
+  "manifest_version": 2,
+  "name": "yt_ad_remover",
+  "version": "1.0",
+
+  "description": "skips youtube ads",
+
+  "icons": {
+    "48": "skip.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*youtube*"],
+      "js": ["overlay_ads.js"]
+    }
+  ]
+
+}
