@@ -3,7 +3,19 @@
 	"description": "skip ads watching youtube",
 	"version": "1.0",
 	"manifest_version": 3,
-	"background": {
-		"service_worker": "overlay_ads.js"
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["overlay_ads.js"],
+			"run_at": "document_end"
+		}
+	],
+	"permissions": [
+		"activeTab"
+	],
+
+	"action": {
+		"default_icon": "skip.png"
 	}
 }
