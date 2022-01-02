@@ -12,9 +12,9 @@ if (is_youtube) {
 
 		// small ads that are overlayed on top of youtube screens
 		var check_smallAd_exist = setInterval(function() {
-			var small_ad = document.getElementsByClassName("ytp-ad-overlay-image"); // grab ad element
+			var small_ad = document.getElementsByClassName("ytp-ad-overlay-close-button"); // grab ad element
 			if ( small_ad.length ) {
-				small_ad[0].parentNode.removeChild(small_ad[0]); // delete ad element
+				small_ad[0].click(); // delete ad element
 			}
 		}, 100);
 
@@ -22,7 +22,7 @@ if (is_youtube) {
 		var check_textAd_exist = setInterval(function() {
 			var textAd = document.getElementsByClassName("ytp-ad-overlay-slot"); // grab ad element
 			if ( textAd.length ) {
-				textAd[0].parentNode.removeChild(textAd[0]); // delete ad element
+				document.getElementsByClassName("ytp-ad-overlay-close-button")[0].click(); // delete ad element
 			}
 		}, 100);
 }
