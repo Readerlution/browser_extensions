@@ -15,6 +15,10 @@
 		"activeTab"
 	],
 
+	"icons": {
+		"128": "skip_big.png"
+	},
+
 	"action": {
 		"default_icon": "skip.png"
 	}
