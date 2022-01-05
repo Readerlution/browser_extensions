@@ -3,7 +3,7 @@
 
   "manifest_version": 2,
   "name": "yt_ad_remover",
-  "version": "1.0",
+  "version": "2.0",
 
   "description": "skips youtube ads",
 
@@ -13,7 +13,7 @@
 
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://www.youtube.com/*"],
       "js": ["overlay_ads.js"]
     }
   ],
