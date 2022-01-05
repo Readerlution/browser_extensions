@@ -25,4 +25,12 @@ if (is_youtube) {
 				document.getElementsByClassName("ytp-ad-overlay-close-button")[0].click(); // delete ad element
 			}
 		}, 100);
+
+		// no skip button full screen ads
+		var check_noSkip_exist = setInterval(function() {
+			var noSkipAd = document.getElementsByClassName("ytp-ad-preview-container");
+			if ( noSkipAd.length ) {
+				document.querySelector("video").playbackRate = 16;
+			}
+		}, 100)
 }
