@@ -29,7 +29,8 @@ if (is_youtube) {
 		// no skip button full screen ads
 		var check_noSkip_exist = setInterval(function() {
 			var noSkipAd = document.getElementsByClassName("ytp-ad-preview-container");
-			if ( noSkipAd.length ) {
+			var noSkipAd2 = document.getElementsByClassName("ad-showing");
+			if ( noSkipAd.length || noSkipAd2.length ) {
 				document.querySelector("video").playbackRate = 16;
 			}
 		}, 100)
