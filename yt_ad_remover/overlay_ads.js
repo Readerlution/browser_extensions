@@ -36,7 +36,7 @@ if (is_youtube) {
 		}, 100);
 
 		// YouTube Premium ad
-		var check_smallAd_exist = setInterval(function() {
+		var check_ytPremium_popup = setInterval(function() {
 			var dismiss = document.getElementById("dismiss-button"); // grab ad element
 			if ( dismiss.length ) {
 				dismiss.click(); // delete ad element
