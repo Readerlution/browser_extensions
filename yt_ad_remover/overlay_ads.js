@@ -33,5 +33,14 @@ if (is_youtube) {
 			if ( noSkipAd.length || noSkipAd2.length ) {
 				document.querySelector("video").playbackRate = 16;
 			}
-		}, 100)
+		}, 100);
+
+		// YouTube Premium ad
+		var check_smallAd_exist = setInterval(function() {
+			var dismiss = document.getElementById("dismiss-button"); // grab ad element
+			if ( dismiss.length ) {
+				dismiss.click(); // delete ad element
+			}
+		}, 100);
+
 }
